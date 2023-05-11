@@ -42,7 +42,6 @@ export async function loadJadeHistory(url: URL): Promise<action[]> {
             const res = await fetch(url);
             const json = await res.json();
 
-            console.log(json);
             const currList = json.data.list as action[];
             jadeActionList.push(...currList);
             prevList = currList
